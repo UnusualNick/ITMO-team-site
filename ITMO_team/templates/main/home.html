@@ -1,0 +1,68 @@
+{% extends 'includes/base.html' %}
+
+{% block body %}
+<div class="terminal">
+    {% include 'includes/header.html' %}
+
+    <div id="content" class="content">
+        <div class="terminal-output">
+            <div class="command-line">
+                <span class="prompt">root@itmo-team:~$</span> ./welcome.sh
+            </div>
+            <div class="command-output">
+                <pre class="ascii-art">
+╔═══════════════════════════════════════════════════╗
+║                                                   ║
+║    ██╗████████╗███╗   ███╗ ██████╗                ║
+║    ██║╚══██╔══╝████╗ ████║██╔═══██╗               ║
+║    ██║   ██║   ██╔████╔██║██║   ██║               ║
+║    ██║   ██║   ██║╚██╔╝██║██║   ██║               ║
+║    ██║   ██║   ██║ ╚═╝ ██║╚██████╔╝               ║
+║    ╚═╝   ╚═╝   ╚═╝     ╚═╝ ╚═════╝                ║
+║                                                   ║
+║         ████████╗███████╗ █████╗ ███╗   ███╗      ║
+║         ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║      ║
+║            ██║   █████╗  ███████║██╔████╔██║      ║
+║            ██║   ██╔══╝  ██╔══██║██║╚██╔╝██║      ║
+║            ██║   ███████╗██║  ██║██║ ╚═╝ ██║      ║
+║            ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝      ║
+║                                                   ║
+╚═══════════════════════════════════════════════════╝
+                    </pre>
+            </div>
+            <div class="command-line">
+                <span class="prompt">root@itmo-team:~$</span> cat about.txt
+            </div>
+            <div class="command-output">
+                <pre>
+[ О КОМАНДЕ ]
+Название: ITMO team
+Университет: ИТМО
+еще что то надо бы добавить
+[ ЦЕЛИ ]
+...
+        </pre>
+            </div>
+
+            <div class="command-line">
+                <span class="prompt">root@itmo-team:~$</span> cat ./info
+            </div>
+            <div class="command-output">
+                <pre>
+[ LINKS ]
+• CTFTime:    <a href="https://ctftime.org/team/283875/" target="_blank">[LINK]</a>
+• Telegram:   <a href="https://t.me/it_sspace" target="_blank">[LINK]</a>
+• Github      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">[LINK]</a>
+        </pre>
+            </div>
+            <div class="command-line">
+                {% include 'includes/footer.html' %}
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+{% endblock body %}

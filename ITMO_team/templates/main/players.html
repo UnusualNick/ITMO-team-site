@@ -1,0 +1,68 @@
+{% extends 'includes/base.html' %}
+
+{% block body %}
+<div class="terminal">
+    {% include 'includes/header.html' %}
+
+    <div id="content" class="content">
+        <div class="terminal-output">
+            <div class="command-line">
+                <span class="prompt">root@itmo-team:~$</span> ls -la ./players/
+            </div>
+
+            <div class="command-output">
+                <div class="competitions-table-wrapper">
+                    <table class="competitions-table">
+                        <thead>
+                            <tr>
+                                <th class="date-col">Игрок</th>
+                                <th class="rank-col">Звание</th>
+                                <th class="link-col">Контакт</th>
+                            </tr>
+                            <tr class="table-separator">
+                                <td colspan="3"></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for player in players %}
+                            <tr>
+                                <td class="name-col">{{ player.name|upper }}</td>
+                                <td class="rank-col">{{ player.rank|upper }}</td>
+                                <td class="link-col">
+                                    {% if player.tg_username %}
+                                    <a href="{{ player.tg_username }}" target="_blank">[TELEGRAM]</a>
+                                    {% else %}
+                                    —
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="3" class="empty-message">Нет данных о соревнованиях</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="command-line">
+                <span class="prompt">root@itmo-team:~$</span> cat ./info
+            </div>
+
+            <div class="command-output">
+                <pre>
+[ LINKS ]
+• CTFTime:    <a href="https://ctftime.org/team/283875/" target="_blank">[LINK]</a>
+• Telegram:   <a href="https://t.me/it_sspace" target="_blank">[LINK]</a>
+• Github:     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">[LINK]</a>
+                </pre>
+            </div>
+
+            <div class="command-line">
+                {% include 'includes/footer.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

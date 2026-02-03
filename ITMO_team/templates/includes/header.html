@@ -1,0 +1,15 @@
+<header>
+    <div class="logo">ITMO_team</div>
+    <ul class="sections">
+        <li data-page="home" class="{% if request.path == '/home/' %}active{% endif %}">
+            <a href="{% url 'home' %}">cd /home</a>
+        </li>
+        <li data-page="achievements" class="{% if request.path == '/achievements/' %}active{% endif %}">
+            <a href="{% url 'achievements' %}">cd /achievements</a>
+        </li>
+        <li data-page="players" class="{% if request.path == '/players/' %}active{% endif %}">
+            <a href="{% url 'players' %}">cd /players</a>
+        </li>
+    </ul>
+</header>
+
