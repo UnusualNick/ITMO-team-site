@@ -1,6 +1,6 @@
 # ITMO Team Site (Rust Edition 🦀)
 
-Welcome to the **B L A Z I N G L Y \ F A S T** rewrite of the ITMO Team Site. 
+Welcome to the ⚡⚡**B L A Z I N G L Y \ F A S T**⚡⚡ rewrite of the ITMO Team Site. 
 Why stick with Python and Django when you can have a compiled, type-safe, memory-safe, fearless-concurrency masterpiece? This is a fully functioning Unix terminal simulator built with **pure Rust** and **Leptos** on the front-end, supported by an **Axum** backend serving up your data.
 
 ## Prerequisites
