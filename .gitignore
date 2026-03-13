@@ -1,13 +1,1 @@
-venv
-.venv
-env
-.env
-__pycache__
-*.db
-*.sqlite
-*.sqlite3
-staticfiles
-uploads/*
-!uploads/.gitkeep
-.DS_Store
-.vscode
+/target
