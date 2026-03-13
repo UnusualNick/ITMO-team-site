@@ -1,7 +1,7 @@
 .PHONY: run-frontend run-backend
 
 run-frontend:
-trunk serve --open
+	trunk serve --open
 
 run-backend:
-cd itmo-backend && cargo run
+	cd itmo-backend && cargo run
